@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAKEHOUSE — пекарня</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-container">
+        <a href="#hero" class="header-logo">
+            <img src="images/logo.png" alt="" class="header-logo-img">
+            <div class="header-logo-text">
+                <span>BAKEHOUSE</span>
+                <small>пекарня</small>
+            </div>
+        </a>
+
+        <nav class="header-nav">
+            <a href="#bakery">ВЫПЕЧКА</a>
+            <a href="#about">О ПЕКАРНЕ</a>
+            <a href="#delivery">ДОСТАВКА</a>
+            <a href="#contact">КОНТАКТЫ</a>
+        </nav>
+
+        <div class="header-actions">
+            <div class="search">
+                <input type="text" placeholder="Искать">
+                <button type="button">⌕</button>
+            </div>
+            <button class="user-button" type="button">♡</button>
+            <button class="order-button" type="button" id="open-order-header">Заказать</button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero" id="hero">
+        <div class="container hero-container">
+            <div class="hero-text">
+                <h1>BAKEHOUSE</h1>
+                <h2>Тепло в каждом кусочке!</h2>
+                <p>
+                    Пекарня BAKEHOUSE — это место, где свежая выпечка, натуральные ингредиенты
+                    и уютная атмосфера объединяются, создавая особое настроение для каждого гостя.
+                    Мы стремимся дарить тепло, комфорт и вкус домашней выпечки, чтобы каждый визит
+                    оставлял приятные впечатления и желание возвращаться снова.
+                </p>
+
+                <div class="hero-buttons">
+                    <button class="hero-order-button" type="button" id="open-order-hero">Заказать</button>
+                    <button class="hero-menu-button" type="button" id="menu-btn">Меню</button>
+                </div>
+            </div>
+
+            <div class="hero-image-wrap">
+                <img src="images/hero.jpg" alt="Свежая выпечка BAKEHOUSE" class="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <section class="bakery" id="bakery">
+        <div class="container">
+            <div class="bakery-heading">
+                <h2>Выпечка</h2>
+                <div class="bakery-line"></div>
+                <p>
+                    Откройте для себя ассортимент BAKEHOUSE — от свежего хлеба и воздушных
+                    круассанов до нежных десертов и ароматных напитков. Мы стремимся создавать
+                    продукцию, которая делает каждый день немного теплее и вкуснее.
+                </p>
+            </div>
+
+            <div class="bakery-grid">
+                <article class="product-card">
+                    <img src="images/cookies.jpg" alt="Печенье с шоколадом">
+                    <h3>Печенье с шоколадом</h3>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/muffin.jpg" alt="Маффин с шоколадом">
+                    <h3>Маффин с шоколадом</h3>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/applepie.jpg" alt=" Яблочный пирог">
+                    <h3>Яблочный пирог</h3>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/croissant.jpg" alt="Круассан с малиной">
+                    <h3>Круассан с малиной</h3>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/cinnamon.jpg" alt="Булочка с корицей">
+                    <h3>Булочка с корицей</h3>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/almond.jpg" alt="Миндальный круассан">
+                    <h3>Миндальный круассан</h3>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/sourdough.jpg" alt="Хлеб на закваске">
+                    <h3>Хлеб на закваске</h3>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/poppy-braid.jpg" alt="Плетёнка с маком">
+                    <h3>Плетёнка с маком</h3>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/pistachio-croissant.jpg" alt="Круассан с фисташкой">
+                    <h3>Круассан с фисташкой</h3>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/flax-bread.jpg" alt="Хлеб со льном">
+                    <h3>Хлеб со льном</h3>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container about-container">
+            <div class="about-image-wrap">
+                <img src="images/croissants.jpg" alt="Выпечка на витрине" class="about-image">
+            </div>
+
+            <div class="about-text">
+                <h2>О ПЕКАРНЕ</h2>
+                <p>
+                    BAKEHOUSE — это место, где каждый день начинается с аромата свежей выпечки
+                    и заботы о вкусе.
+                </p>
+                <p>
+                    Мы создаём хлеб, десерты и выпечку вручную, используя только качественные
+                    ингредиенты и проверенные рецепты.
+                </p>
+                <p>
+                    Для нас важно, чтобы каждая деталь — от текстуры теста до последней крошки —
+                    приносила удовольствие.
+                </p>
+                <p>
+                    Мы верим, что еда должна быть не просто вкусной, а настоящей маленькой
+                    радостью в повседневной жизни.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="delivery" id="delivery">
+        <div class="container delivery-container">
+            <div class="delivery-text">
+                <h2>ДОСТАВКА</h2>
+                <p>
+                    Мы доставляем свежую выпечку прямо к вашей двери, чтобы вы могли наслаждаться
+                    вкусом только что из печи, не выходя из дома. Каждое изделие готовится нашими
+                    опытными пекарями из тщательно отобранных ингредиентов высокого качества.
+                </p>
+                <p>
+                    От ароматного хлеба до нежных десертов — мы бережно упаковываем каждую
+                    позицию, чтобы она приехала к вам свежей, тёплой и максимально вкусной.
+                </p>
+                <p>
+                    Быстрая и надёжная доставка позволяет вам получать любимые лакомства вовремя,
+                    сохраняя их аромат и текстуру. Оставайтесь дома, а мы позаботимся о том,
+                    чтобы у вас всегда был кусочек свежей выпечки.
+                </p>
+            </div>
+
+            <div class="delivery-image-wrap">
+                <img src="images/van.png" alt="Доставка BAKEHOUSE" class="delivery-image">
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2>ОТЗЫВЫ ПОКУПАТЕЛЕЙ</h2>
+
+            <div class="reviews-box">
+                <article class="review review-left-top">
+                    <img src="images/user1.png" alt="Алексей">
+                    <div>
+                        <h3>Алексей</h3>
+                        <p>«Торт на день рождения получился шикарный: красивый, нежный и очень вкусный!»</p>
+                    </div>
+                </article>
+
+                <article class="review review-left-bottom">
+                    <img src="images/user2.png" alt="Владислав">
+                    <div>
+                        <h3>Владислав</h3>
+                        <p>«Круассан был идеальный: хрустящий снаружи, воздушный внутри и с насыщенным сливочным вкусом!»</p>
+                    </div>
+                </article>
+
+                <article class="review review-right">
+                    <img src="images/user3.png" alt="Анна">
+                    <div>
+                        <h3>Анна</h3>
+                        <p>«Шоколадный капкейк от BAKEHOUSE — это просто восторг! Нежный и очень вкусный, хочется ещё!»</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container contact-container">
+            <div class="contact-title">
+                <span></span>
+                <h2>ДЛЯ ЗАКАЗА СВЯЖИТЕСЬ С НАМИ</h2>
+                <span></span>
+            </div>
+
+            <div class="contact-info">
+                <a href="tel:+375293399338">+ 375 (29) 33 99 338</a>
+                <a href="mailto:bakehouse@gmail.com">bakehouse@gmail.com</a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <nav class="footer-nav">
+            <a href="#hero">НА ГЛАВНУЮ</a>
+            <a href="#bakery">ВЫПЕЧКА</a>
+            <a href="#about">О ПЕКАРНЕ</a>
+            <a href="#delivery">ДОСТАВКА</a>
+            <a href="#contact">КОНТАКТЫ</a>
+        </nav>
+
+        <div class="footer-bottom">
+            <p>© 2026 BAKEHOUSE. Все права защищены.</p>
+
+            <div class="footer-socials">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="modal" id="order-modal">
+    <div class="modal-content">
+        <button class="modal-close" type="button" id="modal-close">×</button>
+
+        <h2>Оформить заказ</h2>
+        <p class="modal-subtitle">Оставьте данные, и мы свяжемся с вами для уточнения заказа.</p>
+
+        <form id="order-form">
+            <label>
+                Ваше имя
+                <input type="text" name="name" placeholder="Например, Анна" required>
+            </label>
+
+            <label>
+                Телефон
+                <input type="tel" name="phone" placeholder="+375 (__) ___ __ __" required>
+            </label>
+
+            <label>
+                Что хотите заказать
+                <textarea name="order" placeholder="Например: 2 круассана, чизкейк, хлеб на закваске" required></textarea>
+            </label>
+
+            <button type="submit" class="modal-submit">Отправить заказ</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            const target = document.querySelector(this.getAttribute('href'));
+
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    const menuButton = document.getElementById('menu-btn');
+    const modal = document.getElementById('order-modal');
+    const modalClose = document.getElementById('modal-close');
+    const orderHeaderButton = document.getElementById('open-order-header');
+    const orderHeroButton = document.getElementById('open-order-hero');
+    const orderForm = document.getElementById('order-form');
+
+    menuButton.addEventListener('click', function() {
+        document.querySelector('#bakery').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+
+    function openModal() {
+        modal.classList.add('modal-active');
+        document.body.classList.add('modal-open');
+    }
+
+    function closeModal() {
+        modal.classList.remove('modal-active');
+        document.body.classList.remove('modal-open');
+    }
+
+    orderHeaderButton.addEventListener('click', openModal);
+    orderHeroButton.addEventListener('click', openModal);
+    modalClose.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+
+    orderForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Спасибо! Ваш заказ принят.');
+        orderForm.reset();
+        closeModal();
+    });
+</script>
+
+</body>
+</html>
