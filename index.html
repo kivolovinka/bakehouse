@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BAKEHOUSE — пекарня</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="header">
     <div class="container header-container">
-        <a href="#hero" class="header-logo">
-            <img src="images/logo.png" alt="" class="header-logo-img">
+        <a href="#hero" class="header-logo" aria-label="BAKEHOUSE — на главную">
+            <img src="images/logo.png" alt="Логотип BAKEHOUSE" class="header-logo-img">
             <div class="header-logo-text">
                 <span>BAKEHOUSE</span>
                 <small>пекарня</small>
             </div>
         </a>
 
-        <nav class="header-nav">
+        <nav class="header-nav" aria-label="Основная навигация">
             <a href="#bakery">ВЫПЕЧКА</a>
             <a href="#about">О ПЕКАРНЕ</a>
             <a href="#delivery">ДОСТАВКА</a>
@@ -28,10 +28,10 @@
 
         <div class="header-actions">
             <div class="search">
-                <input type="text" placeholder="Искать">
-                <button type="button">⌕</button>
+                <input type="text" placeholder="Искать" aria-label="Поиск">
+                <button type="button" aria-label="Найти">⌕</button>
             </div>
-            <button class="user-button" type="button">♡</button>
+            <button class="user-button" type="button" aria-label="Избранное">♡</button>
             <button class="order-button" type="button" id="open-order-header">Заказать</button>
         </div>
     </div>
@@ -87,7 +87,7 @@
                 </article>
 
                 <article class="product-card">
-                    <img src="images/applepie.jpg" alt=" Яблочный пирог">
+                    <img src="images/applepie.jpg" alt="Яблочный пирог">
                     <h3>Яблочный пирог</h3>
                 </article>
 
@@ -208,7 +208,7 @@
                     <img src="images/user3.png" alt="Анна">
                     <div>
                         <h3>Анна</h3>
-                        <p>«Шоколадный капкейк от BAKEHOUSE — это просто восторг! Нежный и очень вкусный, хочется ещё!»</p>
+                        <p>«Миндальный круассан от BAKEHOUSE — это просто восторг! Нежный и очень вкусный, хочется ещё!»</p>
                     </div>
                 </article>
             </div>
@@ -226,6 +226,7 @@
             <div class="contact-info">
                 <a href="tel:+375293399338">+ 375 (29) 33 99 338</a>
                 <a href="mailto:bakehouse@gmail.com">bakehouse@gmail.com</a>
+                <address>г. Минск, ул. Филимонова, 10</address>
             </div>
         </div>
     </section>
@@ -234,13 +235,29 @@
 
 <footer class="footer">
     <div class="container">
-        <nav class="footer-nav">
-            <a href="#hero">НА ГЛАВНУЮ</a>
-            <a href="#bakery">ВЫПЕЧКА</a>
-            <a href="#about">О ПЕКАРНЕ</a>
-            <a href="#delivery">ДОСТАВКА</a>
-            <a href="#contact">КОНТАКТЫ</a>
-        </nav>
+        <div class="footer-main">
+            <a href="#hero" class="footer-logo" aria-label="BAKEHOUSE — на главную">
+                <img src="images/logo2.png" alt="Логотип BAKEHOUSE" class="footer-logo-img">
+                <div class="footer-logo-text">
+                    <span>BAKEHOUSE</span>
+                    <small>пекарня</small>
+                </div>
+            </a>
+
+            <nav class="footer-nav" aria-label="Навигация в футере">
+                <a href="#hero">НА ГЛАВНУЮ</a>
+                <a href="#bakery">ВЫПЕЧКА</a>
+                <a href="#about">О ПЕКАРНЕ</a>
+                <a href="#delivery">ДОСТАВКА</a>
+                <a href="#contact">КОНТАКТЫ</a>
+            </nav>
+
+            <div class="footer-contacts">
+                <a href="tel:+375293399338">+ 375 (29) 33 99 338</a>
+                <a href="mailto:bakehouse@gmail.com">bakehouse@gmail.com</a>
+                <address>г. Минск, ул. Филимонова, 10</address>
+            </div>
+        </div>
 
         <div class="footer-bottom">
             <p>© 2026 BAKEHOUSE. Все права защищены.</p>
@@ -306,39 +323,61 @@
     const orderHeroButton = document.getElementById('open-order-hero');
     const orderForm = document.getElementById('order-form');
 
-    menuButton.addEventListener('click', function() {
-        document.querySelector('#bakery').scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+    if (menuButton) {
+        menuButton.addEventListener('click', function() {
+            const bakerySection = document.querySelector('#bakery');
+
+            if (bakerySection) {
+                bakerySection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         });
-    });
+    }
 
     function openModal() {
-        modal.classList.add('modal-active');
-        document.body.classList.add('modal-open');
+        if (modal) {
+            modal.classList.add('modal-active');
+            document.body.classList.add('modal-open');
+        }
     }
 
     function closeModal() {
-        modal.classList.remove('modal-active');
-        document.body.classList.remove('modal-open');
+        if (modal) {
+            modal.classList.remove('modal-active');
+            document.body.classList.remove('modal-open');
+        }
     }
 
-    orderHeaderButton.addEventListener('click', openModal);
-    orderHeroButton.addEventListener('click', openModal);
-    modalClose.addEventListener('click', closeModal);
+    if (orderHeaderButton) {
+        orderHeaderButton.addEventListener('click', openModal);
+    }
 
-    modal.addEventListener('click', function(event) {
-        if (event.target === modal) {
+    if (orderHeroButton) {
+        orderHeroButton.addEventListener('click', openModal);
+    }
+
+    if (modalClose) {
+        modalClose.addEventListener('click', closeModal);
+    }
+
+    if (modal) {
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+    }
+
+    if (orderForm) {
+        orderForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Спасибо! Ваш заказ принят.');
+            orderForm.reset();
             closeModal();
-        }
-    });
-
-    orderForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        alert('Спасибо! Ваш заказ принят.');
-        orderForm.reset();
-        closeModal();
-    });
+        });
+    }
 </script>
 
 </body>
